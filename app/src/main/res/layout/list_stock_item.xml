@@ -18,7 +18,7 @@
             android:textSize="25sp"
             android:text="曲美家具"
             android:textColor="@color/dodgerblue"
-            android:id="@+id/title_textview"/>
+            android:id="@+id/name_textview"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -71,6 +71,7 @@
     </LinearLayout>
 
 
+
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
@@ -87,7 +88,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:textSize="20sp"
-            android:id="@+id/stock_cnt_txtview"
+            android:id="@+id/stock_num_txtview"
             android:text="21"
             android:layout_marginLeft="@dimen/layx2"
             android:layout_weight="1.0"/>
@@ -110,12 +111,52 @@
 
     </LinearLayout>
 
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/layx2">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="类型"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:id="@+id/stock_type_txtview"
+            android:text="21"
+            android:layout_marginLeft="@dimen/layx2"
+            android:layout_weight="1.0"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="推荐星级"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:layout_marginLeft="@dimen/layx2"
+            android:id="@+id/recommend_star_txtview"
+            android:textColor="@color/red"
+            android:text="3"
+            android:layout_weight="1.0"/>
+
+    </LinearLayout>
+
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/layx2"
-        android:textColor="@color/black"
-        android:id="@+id/des_txtview"
+        android:textColor="@color/green"
+        android:id="@+id/oneword_des_txtview"
         android:textSize="20sp"
         android:text="股票可以买入，做波段操作"
         android:ellipsize="end"/>
@@ -131,7 +172,7 @@
             android:layout_weight="1.0"
             android:textSize="20sp"
             android:text="成交明细"
-            android:id="@+id/detail_btn"/>
+            android:id="@+id/history_btn"/>
 
         <Button
             android:layout_width="0dp"

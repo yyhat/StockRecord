@@ -9,10 +9,11 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MainActivity">
 
-    <ListView
+    <fragment
+        android:id="@+id/buy_stock_fragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/buy_stock_list">
+        android:name="com.hat.com.hat.stock.activity.BuyStockFragment"
+        tools:layout="@layout/activity_buy_stock"/>
 
-    </ListView>
 </RelativeLayout>
