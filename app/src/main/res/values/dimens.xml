@@ -2,4 +2,20 @@
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
+
+
+
+    <dimen name="side_width">15.0dip</dimen>
+    <dimen name="min_space_width">5.0dip</dimen>
+    <dimen name="layout_top_margin">10.0dip</dimen>
+
+    <!--字体大小-->
+    <dimen name="textsize_second_title_min">12.0sp</dimen>
+    <dimen name="textsize_second_title">15.0sp</dimen>
+    <dimen name="textsize_first_title">17.0sp</dimen>
+
+
+    <item type="fraction" name="dialog_min_width_major">65%</item>
+    <item type="fraction" name="dialog_min_width_minor">95%</item>
+
 </resources>

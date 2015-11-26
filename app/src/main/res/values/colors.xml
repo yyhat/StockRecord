@@ -288,4 +288,14 @@
     <!--灰色cc -->
     <color name="gray_8f">#8f8f8f</color>
     <!--灰色8f -->
+
+
+    <color name="color_main_content_bg">#ffffffff</color>
+    <color name="color_first_text">#ff333333</color>
+    <color name="color_second_text">#ff666666</color>
+    <color name="color_stock_text">#ff37589f</color>
+    <color name="color_gray_text">#ff999999</color>
+    <color name="color_new_line">#ffcccccc</color>
+    <color name="color_main_bg">#ffefefef</color>
+
 </resources>
