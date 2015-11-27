@@ -19,20 +19,22 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
                 android:layout_marginRight="5.0dip"
                 android:text="股票名称"
                 android:textColor="@color/color_stock_text"
-                android:textSize="@dimen/textsize_first_title" />
+                android:textSize="@dimen/textsize_second_title" />
 
             <EditText
-                android:id="@+id/add"
+                android:id="@+id/addStockName"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/edittext_height"
+                android:layout_gravity="center_vertical"
                 android:layout_weight="1.0"
                 android:background="@drawable/shurukuang"
                 android:text=""
                 android:textColor="@color/color_stock_text"
-                android:textSize="@dimen/textsize_first_title" />
+                android:textSize="@dimen/textsize_second_title" />
 
         </LinearLayout>
 
@@ -47,21 +49,23 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
                 android:layout_marginRight="5.0dip"
                 android:text="股票代码"
                 android:textColor="@color/color_stock_text"
-                android:textSize="@dimen/textsize_first_title" />
+                android:textSize="@dimen/textsize_second_title" />
 
             <EditText
                 android:id="@+id/addStockCode"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/edittext_height"
+                android:layout_gravity="center_vertical"
                 android:layout_weight="1.0"
                 android:background="@drawable/shurukuang"
                 android:inputType="number"
                 android:text=""
                 android:textColor="@color/color_stock_text"
-                android:textSize="@dimen/textsize_first_title" />
+                android:textSize="@dimen/textsize_second_title" />
 
         </LinearLayout>
 
@@ -75,6 +79,7 @@
             <RadioGroup
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:id="@+id/addStockRadioGroup"
                 android:orientation="horizontal">
 
                 <RadioButton
@@ -83,7 +88,7 @@
                     android:layout_height="wrap_content"
                     android:text="买入"
                     android:textColor="@color/color_stock_text"
-                    android:textSize="@dimen/textsize_first_title" />
+                    android:textSize="@dimen/textsize_second_title" />
 
                 <RadioButton
                     android:id="@+id/sellRadioBtn"
@@ -91,7 +96,7 @@
                     android:layout_height="wrap_content"
                     android:text="卖出"
                     android:textColor="@color/color_stock_text"
-                    android:textSize="@dimen/textsize_first_title" />
+                    android:textSize="@dimen/textsize_second_title" />
 
             </RadioGroup>
         </LinearLayout>
@@ -106,21 +111,23 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
                 android:layout_marginRight="5.0dip"
                 android:text="股票数量"
                 android:textColor="@color/color_stock_text"
-                android:textSize="@dimen/textsize_first_title" />
+                android:textSize="@dimen/textsize_second_title" />
 
             <EditText
                 android:id="@+id/addStockNum"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/edittext_height"
+                android:layout_gravity="center_vertical"
                 android:layout_weight="1.0"
                 android:background="@drawable/shurukuang"
                 android:inputType="number"
                 android:text=""
                 android:textColor="@color/color_stock_text"
-                android:textSize="@dimen/textsize_first_title" />
+                android:textSize="@dimen/textsize_second_title" />
 
         </LinearLayout>
 
@@ -135,21 +142,23 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
                 android:layout_marginRight="5.0dip"
                 android:text="股票价格"
                 android:textColor="@color/color_stock_text"
-                android:textSize="@dimen/textsize_first_title" />
+                android:textSize="@dimen/textsize_second_title" />
 
             <EditText
                 android:id="@+id/addStockPrice"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/edittext_height"
+                android:layout_gravity="center_vertical"
                 android:layout_weight="1.0"
                 android:background="@drawable/shurukuang"
                 android:inputType="number"
                 android:text=""
                 android:textColor="@color/color_stock_text"
-                android:textSize="@dimen/textsize_first_title" />
+                android:textSize="@dimen/textsize_second_title" />
 
         </LinearLayout>
 
@@ -164,20 +173,22 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
                 android:layout_marginRight="5.0dip"
                 android:text="所属板块"
                 android:textColor="@color/color_stock_text"
-                android:textSize="@dimen/textsize_first_title" />
+                android:textSize="@dimen/textsize_second_title" />
 
             <EditText
                 android:id="@+id/addStockType"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/edittext_height"
+                android:layout_gravity="center_vertical"
                 android:layout_weight="1.0"
                 android:background="@drawable/shurukuang"
                 android:text=""
                 android:textColor="@color/color_stock_text"
-                android:textSize="@dimen/textsize_first_title" />
+                android:textSize="@dimen/textsize_second_title" />
 
         </LinearLayout>
 
@@ -191,21 +202,23 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
                 android:layout_marginRight="5.0dip"
                 android:text="推荐等级"
                 android:textColor="@color/color_stock_text"
-                android:textSize="@dimen/textsize_first_title" />
+                android:textSize="@dimen/textsize_second_title" />
 
             <EditText
                 android:id="@+id/addStockRecommendStar"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/edittext_height"
+                android:layout_gravity="center_vertical"
                 android:layout_weight="1.0"
                 android:background="@drawable/shurukuang"
                 android:inputType="number"
                 android:text=""
                 android:textColor="@color/color_stock_text"
-                android:textSize="@dimen/textsize_first_title" />
+                android:textSize="@dimen/textsize_second_title" />
 
         </LinearLayout>
 

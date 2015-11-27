@@ -1,5 +1,6 @@
 package com.hat.stock;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -7,6 +8,8 @@ import android.support.v4.app.FragmentManager;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.hat.stock.Interface.InputListener;
+import com.hat.stock.activity.ActivityAddStock;
 import com.hat.stock.activity.AddStockDialogFragment;
 import com.hat.stock.activity.BaseFragment;
 import com.hat.stock.bean.StockItemData;
@@ -37,7 +40,15 @@ public class MainActivity extends FragmentActivity implements InputListener {
         if(item.getItemId() == R.id.menu_add)
         {
             AddStockDialogFragment dialog = new AddStockDialogFragment();
+            Bundle bundle = new Bundle();
+            bundle.putBoolean("flag", true);
+            dialog.setArguments(bundle);
             dialog.show(getSupportFragmentManager(), "AddStockDialogFragment");
+        }
+        else if(item.getItemId() == R.id.menu_test)
+        {
+            Intent intent = new Intent(MainActivity.this, ActivityAddStock.class);
+            startActivity(intent);
         }
         return super.onOptionsItemSelected(item);
     }

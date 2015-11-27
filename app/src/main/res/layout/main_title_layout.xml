@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/main_title_height"
+    android:background="@color/color_main_title_bg">
+
+    <RelativeLayout
+        android:id="@+id/titleBackBtn"
+        android:layout_width="@dimen/main_title_btn_width"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/toolselector">
+
+        <ImageView
+            android:layout_width="32.0dip"
+            android:layout_height="32.0dip"
+            android:layout_centerInParent="true"
+            android:src="@drawable/back" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/titleCloseBtn"
+        android:layout_width="@dimen/main_title_btn_width"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/toolselector"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="32.0dip"
+            android:layout_height="32.0dip"
+            android:layout_centerInParent="true"
+            android:src="@drawable/menu_close" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/titlefinishBtn"
+        android:layout_width="60.0dip"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/toolselector"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="完成"
+            android:textColor="@color/color_main_red"
+            android:textSize="@dimen/textsize_second_title" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/titleShareBtn"
+        android:layout_width="@dimen/main_title_btn_width"
+        android:layout_height="fill_parent"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/toolselector"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="32.0dip"
+            android:layout_height="32.0dip"
+            android:layout_centerInParent="true"
+            android:src="@drawable/menu_share" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/titleMoreBtn"
+        android:layout_width="@dimen/main_title_btn_width"
+        android:layout_height="fill_parent"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/toolselector"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="32.0dip"
+            android:layout_height="32.0dip"
+            android:layout_centerInParent="true"
+            android:src="@drawable/more" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/topTitleLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_centerInParent="true"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/titleName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:ellipsize="end"
+            android:maxLength="20"
+            android:singleLine="true"
+            android:textColor="@color/color_first_text"
+            android:textSize="@dimen/textsize_main_title" />
+
+        <ImageView
+            android:id="@+id/titleDownImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5.0dip"
+            android:src="@drawable/title_down"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_centerInParent="true">
+
+        <TextView
+            android:id="@+id/quoteTitleName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="13.0dip"
+            android:textColor="@color/color_first_text"
+            android:textSize="@dimen/textsize_first_title" />
+
+        <TextView
+            android:id="@+id/quoteTitleInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/color_gray_text"
+            android:textSize="@dimen/textsize_comment" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/titleGeniusLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_centerInParent="true"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:id="@+id/chanceBtnLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0">
+
+            <TextView
+                android:id="@+id/chanceBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="交易机会"
+                android:textSize="@dimen/textsize_first_title" />
+
+            <View
+                android:id="@+id/chanceLine"
+                android:layout_width="fill_parent"
+                android:layout_height="1.0px"
+                android:layout_alignParentBottom="true"
+                android:background="@color/color_main_red" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/geniusBtnLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0">
+
+            <TextView
+                android:id="@+id/geniusBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="    牛人    "
+                android:textSize="@dimen/textsize_first_title" />
+
+            <View
+                android:id="@+id/geniusLine"
+                android:layout_width="fill_parent"
+                android:layout_height="1.0px"
+                android:layout_alignParentBottom="true"
+                android:background="@color/color_main_red" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/matchBtnLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0">
+
+            <TextView
+                android:id="@+id/matchBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="炒股大赛"
+                android:textSize="@dimen/textsize_first_title" />
+
+            <ImageView
+                android:id="@+id/matchDot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="20.0dip"
+                android:layout_marginTop="10.0dip"
+                android:background="@drawable/reddot" />
+
+            <View
+                android:id="@+id/matchLine"
+                android:layout_width="fill_parent"
+                android:layout_height="1.0px"
+                android:layout_alignParentBottom="true"
+                android:background="@color/color_main_red" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/quoteDetailTitleLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/titleStockName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/color_first_text"
+            android:textSize="@dimen/textsize_first_title" />
+
+        <LinearLayout
+            android:id="@+id/titleStockLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/titleStockTypeImg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="2.0dip"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/titleStockCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_gray_text"
+                android:textSize="@dimen/textsize_comment" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/titleStockInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/color_gray_text"
+            android:textSize="@dimen/textsize_comment"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/titlePriceLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/titlePrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/textsize_comment" />
+
+            <TextView
+                android:id="@+id/titleUpDown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5.0dip"
+                android:layout_marginRight="5.0dip"
+                android:textSize="@dimen/textsize_comment" />
+
+            <TextView
+                android:id="@+id/titleUpDownRate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/textsize_comment" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_alignParentRight="true"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/titleSearchBtn"
+            android:layout_width="@dimen/main_title_btn_width"
+            android:layout_height="fill_parent"
+            android:background="@drawable/toolselector"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/search" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/titleRefreshBtn"
+            android:layout_width="@dimen/main_title_btn_width"
+            android:layout_height="fill_parent"
+            android:background="@drawable/toolselector">
+
+            <ImageView
+                android:id="@+id/refreshImg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/refresh" />
+
+            <ProgressBar
+                android:id="@+id/refreshBar"
+                style="?android:attr/progressBarStyleSmall"
+                android:layout_width="19.0dip"
+                android:layout_height="19.0dip"
+                android:layout_centerInParent="true"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/geniusSearchBtn"
+        android:layout_width="@dimen/main_title_btn_width"
+        android:layout_height="fill_parent"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/toolselector"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/geniussearch" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/geniusSubmitBtn"
+        android:layout_width="60.0dip"
+        android:layout_height="fill_parent"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/toolselector"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="确定"
+            android:textColor="@color/color_main_red"
+            android:textSize="@dimen/textsize_second_title" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/settingsBtn"
+        android:layout_width="@dimen/main_title_btn_width"
+        android:layout_height="fill_parent"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/toolselector"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/settings" />
+
+        <ImageView
+            android:id="@+id/settingDot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="5.0dip"
+            android:layout_marginTop="5.0dip"
+            android:background="@drawable/reddot"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/talkBtn"
+        android:layout_width="60.0dip"
+        android:layout_height="fill_parent"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/toolselector"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/talkText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="发表"
+            android:textColor="@color/color_main_red"
+            android:textSize="@dimen/textsize_second_title" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/letterBtn"
+        android:layout_width="@dimen/main_title_btn_width"
+        android:layout_height="fill_parent"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/toolselector"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/letter" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/titleReplyBtn"
+        android:layout_width="@dimen/main_title_btn_width"
+        android:layout_height="fill_parent"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/toolselector"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/titleRightImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/input" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/searchGeniusBtn"
+        android:layout_width="@dimen/main_title_btn_width"
+        android:layout_height="fill_parent"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/toolselector"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/searchgenius" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/collectBtn"
+        android:layout_width="@dimen/main_title_btn_width"
+        android:layout_height="fill_parent"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/toolselector"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/collectImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/collect_n" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1.0px"
+        android:layout_alignParentBottom="true"
+        android:background="@color/color_title_line" />
+</RelativeLayout>

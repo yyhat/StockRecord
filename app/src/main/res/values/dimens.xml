@@ -8,12 +8,18 @@
     <dimen name="side_width">15.0dip</dimen>
     <dimen name="min_space_width">5.0dip</dimen>
     <dimen name="layout_top_margin">10.0dip</dimen>
+    <dimen name="edittext_height">40.0dip</dimen>
 
     <!--字体大小-->
     <dimen name="textsize_second_title_min">12.0sp</dimen>
     <dimen name="textsize_second_title">15.0sp</dimen>
     <dimen name="textsize_first_title">17.0sp</dimen>
-
+    <dimen name="side_width_half">7.5dip</dimen>
+    <dimen name="sub_tool_title_height">38.0dip</dimen>
+    <dimen name="main_title_height">44.0dip</dimen>
+    <dimen name="main_title_btn_width">44.0dip</dimen>
+    <dimen name="textsize_main_title">20.0sp</dimen>
+    <dimen name="textsize_comment">10.0sp</dimen>
 
     <item type="fraction" name="dialog_min_width_major">65%</item>
     <item type="fraction" name="dialog_min_width_minor">95%</item>

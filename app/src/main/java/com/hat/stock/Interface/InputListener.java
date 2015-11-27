@@ -1,4 +1,4 @@
-package com.hat.stock;
+package com.hat.stock.Interface;
 
 import com.hat.stock.bean.StockItemData;
 

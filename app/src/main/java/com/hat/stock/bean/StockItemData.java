@@ -11,10 +11,16 @@ public class StockItemData {
     private float CurPrice;
     private float CostPrice;
     private int Num;
+
+
+
+    private int ChangeNum;
+    private float ChangePrice;
     private String Ratio;
     private String Type;
     private float RecommendStar;
     private String OneWordDes;
+
     public List<Integer> mDiaryList;
 
 
@@ -90,4 +96,40 @@ public class StockItemData {
         Type = type;
     }
 
+    public int getChangeNum() {
+        return ChangeNum;
+    }
+
+    public void setChangeNum(int changeNum) {
+        ChangeNum = changeNum;
+    }
+
+    public float getChangePrice() {
+        return ChangePrice;
+    }
+
+    public void setChangePrice(float changePrice) {
+        ChangePrice = changePrice;
+    }
+
+    public void updateData()
+    {
+        //添加股票
+        if(getNum() == 0)
+        {
+            setNum(getChangeNum());
+            //保存到数据库
+            setCostPrice(getChangePrice());
+        }
+        else //编辑股票
+        {
+            boolean isBuy = getChangeNum() > 0;
+            float totalCost = getCostPrice() * getNum();
+            float changeCost = getChangeNum() * getChangePrice();
+
+            //保存到数据库修改记录
+
+            setCostPrice((totalCost + changeCost) / (getNum() + getChangeNum()));
+        }
+    }
 }

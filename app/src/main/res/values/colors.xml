@@ -297,5 +297,12 @@
     <color name="color_gray_text">#ff999999</color>
     <color name="color_new_line">#ffcccccc</color>
     <color name="color_main_bg">#ffefefef</color>
+    <color name="color_profit_red_bg">#fff67764</color>
+    <color name="color_rank_line">#ffccd4e1</color>
+    <color name="color_sub_title_bg">#ffeef2f8</color>
+    <color name="color_bottom_line">#ffccd4e1</color>
+    <color name="color_main_red">#ffef3c3c</color>
+    <color name="color_main_title_bg">#ffffffff</color>
+    <color name="color_title_line">#ffa1acbf</color>
 
 </resources>

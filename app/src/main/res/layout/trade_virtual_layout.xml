@@ -1,0 +1,614 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/color_main_bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/virtualLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_profit_red_bg"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5.0dip"
+            android:layout_marginLeft="@dimen/side_width"
+            android:layout_marginRight="@dimen/side_width"
+            android:layout_marginTop="10.0dip">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true">
+
+                <TextView
+                    android:id="@+id/maxBackValueTip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="7.0dip"
+                    android:text="净   值"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/textsize_second_title" />
+
+                <TextView
+                    android:id="@+id/maxBackValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@id/maxBackValueTip"
+                    android:text="--"
+                    android:textColor="@android:color/white"
+                    android:textSize="33.0sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:paddingBottom="5.0dip">
+
+                <TextView
+                    android:id="@+id/totalRateTip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="总收益"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/textsize_second_title" />
+
+                <TextView
+                    android:id="@+id/totalRate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/side_width"
+                    android:layout_toRightOf="@id/totalRateTip"
+                    android:singleLine="true"
+                    android:text="--"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/textsize_second_title" />
+
+                <TextView
+                    android:id="@+id/userRankingTip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@id/totalRateTip"
+                    android:gravity="bottom"
+                    android:text="排    名"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/textsize_second_title" />
+
+                <TextView
+                    android:id="@+id/userRanking"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/totalRateTip"
+                    android:layout_marginLeft="@dimen/side_width"
+                    android:layout_toRightOf="@id/userRankingTip"
+                    android:gravity="bottom"
+                    android:singleLine="true"
+                    android:text="--"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/textsize_second_title" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/myLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0px"
+                android:layout_marginLeft="@dimen/side_width"
+                android:layout_marginRight="@dimen/side_width"
+                android:background="#fff7998c" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10.0dip"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="50.0dip"
+                    android:layout_weight="1.0">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/totalValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:textColor="@color/white" />
+
+                        <TextView
+                            android:id="@+id/realTotalText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="总资产"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/textsize_second_title_min" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1.0px"
+                        android:layout_height="fill_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginBottom="5.0dip"
+                        android:layout_marginTop="5.0dip"
+                        android:background="#fff7998c" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="50.0dip"
+                    android:layout_weight="1.0">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/usedValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:textColor="@color/white" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="可用资金"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/textsize_second_title_min" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1.0px"
+                        android:layout_height="fill_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginBottom="5.0dip"
+                        android:layout_marginTop="5.0dip"
+                        android:background="#fff7998c" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="50.0dip"
+                    android:layout_weight="1.0">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/dayProfit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:textColor="@color/white" />
+
+                        <TextView
+                            android:id="@+id/realusedText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="当日盈亏"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/textsize_second_title_min" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/side_width_half"
+                android:paddingLeft="@dimen/side_width_half"
+                android:paddingRight="@dimen/side_width_half"
+                android:weightSum="2.0">
+
+                <Button
+                    android:id="@+id/buyBtn"
+                    android:layout_width="0.0dip"
+                    android:layout_height="30.0dip"
+                    android:layout_marginRight="@dimen/side_width_half"
+                    android:layout_weight="1.0"
+                    android:background="@drawable/trade_operate_button"
+                    android:text="买入"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/textsize_second_title" />
+
+                <Button
+                    android:id="@+id/sellBtn"
+                    android:layout_width="0.0dip"
+                    android:layout_height="30.0dip"
+                    android:layout_marginRight="@dimen/side_width_half"
+                    android:layout_weight="1.0"
+                    android:background="@drawable/trade_operate_button"
+                    android:text="卖出"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/textsize_second_title"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/cancelBtn"
+                    android:layout_width="0.0dip"
+                    android:layout_height="30.0dip"
+                    android:layout_marginRight="@dimen/side_width_half"
+                    android:layout_weight="1.0"
+                    android:background="@drawable/trade_operate_button"
+                    android:text="撤单"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/textsize_second_title"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/searchBtn"
+                    android:layout_width="0.0dip"
+                    android:layout_height="30.0dip"
+                    android:layout_weight="1.0"
+                    android:background="@drawable/trade_operate_button"
+                    android:text="查询"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/textsize_second_title" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:padding="@dimen/side_width">
+
+        <LinearLayout
+            android:id="@+id/yeildLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="140.0dip"
+                android:layout_weight="6.0"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/monthRateText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10.0dip"
+                        android:text="月均收益"
+                        android:textColor="@color/color_first_text"
+                        android:textSize="@dimen/textsize_second_title_min" />
+
+                    <TextView
+                        android:id="@+id/monthRate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/color_first_text"
+                        android:textSize="@dimen/textsize_second_title_min" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/winRateText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10.0dip"
+                        android:text="胜        率"
+                        android:textColor="@color/color_first_text"
+                        android:textSize="@dimen/textsize_second_title_min" />
+
+                    <TextView
+                        android:id="@+id/winRate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/color_first_text"
+                        android:textSize="@dimen/textsize_second_title_min" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/positionText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10.0dip"
+                        android:text="当前仓位"
+                        android:textColor="@color/color_first_text"
+                        android:textSize="@dimen/textsize_second_title_min" />
+
+                    <TextView
+                        android:id="@+id/position"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/color_first_text"
+                        android:textSize="@dimen/textsize_second_title_min" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0px"
+                    android:layout_marginBottom="5.0dip"
+                    android:layout_marginTop="5.0dip"
+                    android:background="@color/color_new_line" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/periodText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10.0dip"
+                        android:text="平均持股"
+                        android:textColor="@color/color_first_text"
+                        android:textSize="@dimen/textsize_second_title_min" />
+
+                    <TextView
+                        android:id="@+id/period"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/color_first_text"
+                        android:textSize="@dimen/textsize_second_title_min" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/monthTradeText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10.0dip"
+                        android:text="月均交易"
+                        android:textColor="@color/color_first_text"
+                        android:textSize="@dimen/textsize_second_title_min" />
+
+                    <TextView
+                        android:id="@+id/monthTrade"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/color_first_text"
+                        android:textSize="@dimen/textsize_second_title_min" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0px"
+                    android:layout_marginBottom="5.0dip"
+                    android:layout_marginTop="5.0dip"
+                    android:background="@color/color_new_line" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/firstTradeText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10.0dip"
+                        android:text="初次交易"
+                        android:textColor="@color/color_first_text"
+                        android:textSize="@dimen/textsize_second_title_min" />
+
+                    <TextView
+                        android:id="@+id/firstTrade"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/color_first_text"
+                        android:textSize="@dimen/textsize_second_title_min" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lastTradeTimeText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10.0dip"
+                        android:text="最近交易"
+                        android:textColor="@color/color_first_text"
+                        android:textSize="@dimen/textsize_second_title_min" />
+
+                    <TextView
+                        android:id="@+id/lastTradeTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/color_first_text"
+                        android:textSize="@dimen/textsize_second_title_min" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/entrustNumLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/sub_tool_title_height"
+        android:layout_marginTop="10.0dip"
+        android:background="@color/color_sub_title_bg">
+
+        <TextView
+            android:id="@+id/entrustNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/side_width"
+            android:text="当前委托"
+            android:textColor="@color/color_first_text"
+            android:textSize="@dimen/textsize_second_title" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1.0px"
+            android:layout_alignParentBottom="true"
+            android:background="@color/color_bottom_line" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1.0px"
+            android:layout_alignParentTop="true"
+            android:background="@color/color_bottom_line" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/entrustListLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" />
+
+    <RelativeLayout
+        android:id="@+id/numTextLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/sub_tool_title_height"
+        android:layout_marginTop="5.0dip"
+        android:background="@color/color_sub_title_bg">
+
+        <TextView
+            android:id="@id/positionNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/side_width"
+            android:text="持仓"
+            android:textColor="@color/color_first_text"
+            android:textSize="@dimen/textsize_second_title" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/side_width"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="最新市值"
+                android:textColor="@color/color_first_text"
+                android:textSize="@dimen/textsize_second_title" />
+
+            <TextView
+                android:id="@+id/marketValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/color_first_text"
+                android:textSize="@dimen/textsize_second_title" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1.0px"
+            android:layout_alignParentBottom="true"
+            android:background="@color/color_bottom_line" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1.0px"
+            android:layout_alignParentTop="true"
+            android:background="@color/color_bottom_line" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/positionListLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" />
+
+    <RelativeLayout
+        android:id="@+id/hPositionNumLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/sub_tool_title_height"
+        android:layout_marginTop="5.0dip"
+        android:background="@color/color_sub_title_bg">
+
+        <TextView
+            android:id="@+id/hPositionNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/side_width"
+            android:text="交易历史"
+            android:textColor="@color/color_first_text"
+            android:textSize="@dimen/textsize_second_title" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1.0px"
+            android:layout_alignParentBottom="true"
+            android:background="@color/color_bottom_line" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1.0px"
+            android:layout_alignParentTop="true"
+            android:background="@color/color_bottom_line" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/hPositionListLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" />
+
+    </LinearLayout>
+</ScrollView>
